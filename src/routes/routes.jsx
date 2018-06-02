@@ -55,6 +55,12 @@ const Redux = (location, cb) => {
     },'redux')
 }
 
+const Demo = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('COMPONENTS/Content/Demo').default)
+    },'redux')
+}
+
 const Fetch = (location, cb) => {
     require.ensure([], require => {
         cb(null, require('COMPONENTS/Content/Fetch').default)
@@ -81,7 +87,7 @@ export default (
             <IndexRedirect to="/index/redux" />
             <Route path="/index/redux" getComponent={Redux} />
             <Route path="/index/fetch" getComponent={Fetch} />
-            <Route path="/index/empty" getComponent={Empty} />
+            <Route path="/index/demo" getComponent={Demo} />
 	        <Route path="/index/iconfont" getComponent={IconFont} />
 	        <Route path="/index/product" getComponent={Product}>
 	            <Route path="/index/product/think" getComponent={Think} />
