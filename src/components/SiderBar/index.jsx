@@ -39,6 +39,9 @@ class SiderBar extends React.Component {
                         <Menu.Item key="demo">
                             <Link to="/index/demo" activeStyle={ACTIVE}>Demo</Link>
                         </Menu.Item>
+                        <Menu.Item key="article">
+                            <Link to="/index/article" activeStyle={ACTIVE}>博文</Link>
+                        </Menu.Item>
                         <Menu.Item key="dynamicRoute">
                             <Link to="/index/product" activeStyle={ACTIVE}>动态路由加载</Link>
                         </Menu.Item>

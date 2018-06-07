@@ -44,6 +44,35 @@ let mockConfig = [
         }],
         "position": 0
     },
+    {
+        "name": "list",
+        "type": "post",
+        "url": "/api/list",
+        "response": [
+            // {
+            //     status: 200,
+            //     data: {
+            //         type: article,
+            //         rank: id,
+            //         init: 0,
+            //         num: 8
+            //     }
+            // },
+            {
+                status: 200,
+                message: 'ok',
+                data: [
+                    { "id": "14", "uid": "10000", "view": "7", "title": "标题1标题1标题1标题1标题1","time": "2018-06-06 15:10:25"},
+                    { "id": "13", "uid": "10000", "view": "10", "title": "标题2标题2标题2标题2标题2", "time": "2018-06-06 12:59:32"}, 
+                    { "id": "12", "uid": "10000", "view": "9", "title": "标题3标题3标题3标题3标题3", "time": "2018-06-04 11:20:12"},
+                    { "id": "11", "uid": "10000", "view": "13", "title": "标题4标题4标题4标题4标题4", "time": "2018-06-03 09:35:47"}, 
+                    { "id": "10", "uid": "10000", "view": "5", "title": "标题5标题5标题5标题5标题5", "time": "2018-06-01 20:05:13"},
+                    { "id": "9", "uid": "10000", "view": "10", "title": "标题6标题6标题6标题6标题6", "time": "2018-05-31 16:22:48"}
+                ]
+            }
+        ],
+        "position": 0
+    }
 ];
 
 exports.mockConfig = mockConfig;

@@ -6,6 +6,7 @@ import { browserHistory } from 'react-router';
 
 import Container from 'LAYOUTS/Container';
 import Login from 'LAYOUTS/Container/Login';
+// import Article from '../components/Content/Article';
 
 const Main = (location, cb) => {
     require.ensure([], require => {
@@ -61,6 +62,12 @@ const Demo = (location, cb) => {
     },'redux')
 }
 
+const Article2 = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('COMPONENTS/Content/Article').default)
+    },'redux')
+}
+
 const Fetch = (location, cb) => {
     require.ensure([], require => {
         cb(null, require('COMPONENTS/Content/Fetch').default)
@@ -88,6 +95,7 @@ export default (
             <Route path="/index/redux" getComponent={Redux} />
             <Route path="/index/fetch" getComponent={Fetch} />
             <Route path="/index/demo" getComponent={Demo} />
+            <Route path="/index/article" getComponent={Article2} />
 	        <Route path="/index/iconfont" getComponent={IconFont} />
 	        <Route path="/index/product" getComponent={Product}>
 	            <Route path="/index/product/think" getComponent={Think} />

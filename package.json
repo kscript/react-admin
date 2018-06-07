@@ -46,7 +46,7 @@
   "dependencies": {
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
-    "antd": "^2.4.2",
+    "antd": "^3.6.0",
     "redux-actions": "^0.12.0",
     "redux-logger": "^2.7.0",
     "reselect": "^2.5.4",
